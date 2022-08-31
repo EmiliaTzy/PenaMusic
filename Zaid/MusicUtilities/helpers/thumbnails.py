@@ -68,9 +68,9 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     image2.paste(image5, mask = image5)
 
     # fonts
-    font1 = ImageFont.truetype(r'cache/robot.otf', 30)
-    font2 = ImageFont.truetype(r'cache/robot.otf', 60)
-    font3 = ImageFont.truetype(r'cache/robot.otf', 49)
+    font1 = ImageFont.truetype(r'Roboto-Regular.ttf"', 30)
+    font2 = ImageFont.truetype(r'Roboto-Regular.ttf"', 60)
+    font3 = ImageFont.truetype(r'Roboto-Regular.ttf"', 49)
     font4 = ImageFont.truetype(r'cache/Mukta-ExtraBold.ttf', 35)
 
     image4 = ImageDraw.Draw(image2)
