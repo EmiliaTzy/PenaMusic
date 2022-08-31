@@ -81,9 +81,9 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     image4.text((670, 332), text=title1[1], fill="red", font = font3, align ="left") 
 
     # description
-    views = f"Requester id: {userid}"
-    channel = f"Playing on : {ctitle}"
-    my = "Powered By Zaid"  
+    views = f"Permintaan Dari: {userid}"
+    channel = f"Diputar Di: {ctitle}"
+    my = "Kekuatan Dari Pena Music"  
 
     image4.text((670, 410), text=views, fill="yellow", font = font4, align ="left") 
     image4.text((670, 460), text=channel, fill="yellow", font = font4, align ="left")
