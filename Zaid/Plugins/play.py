@@ -6,7 +6,7 @@ import asyncio
 import shutil
 from pytube import YouTube
 from yt_dlp import YoutubeDL
-from Music import converter
+from Zaid import converter
 import yt_dlp
 import shutil
 import psutil
@@ -16,7 +16,7 @@ from pyrogram.types import Message, Voice
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream, InputStream
 from sys import version as pyver
-from Music import (
+from Zaid import (
     dbb,
     app,
     BOT_USERNAME,
@@ -27,7 +27,7 @@ from Music import (
     ASSUSERNAME,
     ASSMENTION,
 )
-from Music.MusicUtilities.tgcallsrun import (
+from Zaid.MusicUtilities.tgcallsrun import (
     music,
     convert,
     download,
@@ -38,7 +38,7 @@ from Music.MusicUtilities.tgcallsrun import (
     task_done,
     ASS_ACC,
 )
-from Music.MusicUtilities.database.queue import (
+from Zaid.MusicUtilities.database.queue import (
     get_active_chats,
     is_active_chat,
     add_active_chat,
@@ -47,18 +47,18 @@ from Music.MusicUtilities.database.queue import (
     is_music_playing,
     music_off,
 )
-from Music.MusicUtilities.database.onoff import (
+from Zaid.MusicUtilities.database.onoff import (
     is_on_off,
     add_on,
     add_off,
 )
-from Music.MusicUtilities.database.chats import (
+from Zaid.MusicUtilities.database.chats import (
     get_served_chats,
     is_served_chat,
     add_served_chat,
     get_served_chats,
 )
-from Music.MusicUtilities.helpers.inline import (
+from Zaid.MusicUtilities.helpers.inline import (
     play_keyboard,
     search_markup,
     play_markup,
@@ -66,42 +66,42 @@ from Music.MusicUtilities.helpers.inline import (
     audio_markup,
     play_list_keyboard,
 )
-from Music.MusicUtilities.database.blacklistchat import (
+from Zaid.MusicUtilities.database.blacklistchat import (
     blacklisted_chats,
     blacklist_chat,
     whitelist_chat,
 )
-from Music.MusicUtilities.database.gbanned import (
+from Zaid.MusicUtilities.database.gbanned import (
     get_gbans_count,
     is_gbanned_user,
     add_gban_user,
     add_gban_user,
 )
-from Music.MusicUtilities.database.theme import (
+from Zaid.MusicUtilities.database.theme import (
     _get_theme,
     get_theme,
     save_theme,
 )
-from Music.MusicUtilities.database.assistant import (
+from Zaid.MusicUtilities.database.assistant import (
     _get_assistant,
     get_assistant,
     save_assistant,
 )
-from Music.config import DURATION_LIMIT
-from Music.MusicUtilities.helpers.decorators import authorized_users_only
-from Music.MusicUtilities.helpers.decorators import errors
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.gets import (
+from Zaid.config import DURATION_LIMIT
+from Zaid.MusicUtilities.helpers.decorators import authorized_users_only
+from Zaid.MusicUtilities.helpers.decorators import errors
+from Zaid.MusicUtilities.helpers.filters import command
+from Zaid.MusicUtilities.helpers.gets import (
     get_url,
     themes,
     random_assistant,
     ass_det,
 )
-from Music.MusicUtilities.helpers.logger import LOG_CHAT
-from Music.MusicUtilities.helpers.thumbnails import gen_thumb
-from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
-from Music.MusicUtilities.helpers.ytdl import ytdl_opts 
-from Music.MusicUtilities.helpers.inline import (
+from Zaid.MusicUtilities.helpers.logger import LOG_CHAT
+from Zaid.MusicUtilities.helpers.thumbnails import gen_thumb
+from Zaid.MusicUtilities.helpers.chattitle import CHAT_TITLE
+from Zaid.MusicUtilities.helpers.ytdl import ytdl_opts 
+from Zaid.MusicUtilities.helpers.inline import (
     play_keyboard,
     search_markup2,
     search_markup,
@@ -804,7 +804,7 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n⁶ <b>{title6}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁷ <b>{title7}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁸ <b>{title8}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁹ <b>{title9}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n⁶ <b>{title6}</b>\n  ┗ 💡 <u>__[Informasi Selebihnya](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ ⚡ __Kekuatan Oleh {BOT_NAME}__\n\n⁷ <b>{title7}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁸ <b>{title8}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁹ <b>{title9}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -812,7 +812,7 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n¹ <b>{title1}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n¹ <b>{title1}</b>\n  ┗ 💡 <u>__[Informasi Selebihnya](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Kekuatan Oleh {BOT_NAME}__\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  
