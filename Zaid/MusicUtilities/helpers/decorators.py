@@ -1,6 +1,6 @@
-from typing import Callable
+from typing import Callable, Dict, List
 from pyrogram import Client
-from pyrogram.types import Message
+from pyrogram.types import Chat, Message
 
 from Zaid import SUDOERS,client, app
 
