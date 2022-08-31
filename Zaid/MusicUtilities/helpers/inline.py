@@ -65,7 +65,7 @@ play_keyboard = InlineKeyboardMarkup(
                 ],
                 [
                     InlineKeyboardButton(
-                        "Tutup Menu", callback_data="close"
+                        "✘", callback_data="close"
                     )
                 ]    
             ]
