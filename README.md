@@ -40,8 +40,8 @@ Read All Commands
 
 # Deploy
 
-<p align="center"><a href="https://heroku.com/deploy">
-  <img src="https://img.shields.io/badge/Heroku%20Deploy-pink?style=for-the-badge&logo=heroku" width="325" height="50.100" /></a></p>
+<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=RW1pbGlhVHp5L1BlbmFNdXNpYyBtYXN0ZXI">
+  <img src="https://img.shields.io/badge/Heroku%20Deploy%Via%Telegram-cyan?style=for-the-badge&logo=heroku" width="325" height="50.100" /></a></p>
 
 #
 <h2 align="center">
