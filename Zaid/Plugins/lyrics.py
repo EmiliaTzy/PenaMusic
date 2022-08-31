@@ -37,20 +37,20 @@ async def lyricssex(_,CallbackQuery):
     y.verbose = False
     S = y.search_song(t, get_full_info=False)
     if S is None:
-        return await CallbackQuery.answer("❌ Lyrics not found :p", show_alert=True)
+        return await CallbackQuery.answer("❌ Lirik Tidak Ditemukan hehehe", show_alert=True)
     await CallbackQuery.message.delete()
     userid = CallbackQuery.from_user.id
     usr = f"[{CallbackQuery.from_user.first_name}](tg://user?id={userid})"
     xxx = f"""
-**Lyrics Search Powered By Yukki Music Player**
+**Pencarian Lirik Diatur Oleh Eiko Music Player**
 
-**Searched By:-** {usr}
-**Searched Song:-** __{title}__
+**Pencarian Oleh:-** {usr}
+**Pencarian Lagu:-** __{title}__
 
-**Found Lyrics For:-** __{S.title}__
-**Artist:-** {S.artist}
+**Lirik Ditemukan Untuk:-** __{S.title}__
+**Artis:-** {S.artist}
 
-**__Lyrics:__**
+**__Lirik:__**
 
 {S.lyrics}"""
     await CallbackQuery.message.reply_text(xxx)
@@ -58,23 +58,23 @@ async def lyricssex(_,CallbackQuery):
     
 @Client.on_message(filters.command("lyrics"))
 async def lrsearch(_, message: Message):  
-    m = await message.reply_text("🔎 Searching Lyrics")
+    m = await message.reply_text("🔎 Mencari Lirik")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
     y.verbose = False
     S = y.search_song(query, get_full_info=False)
     if S is None:
-        return await m.edit("❌ Lyrics not found :p")
+        return await m.edit("❌ Lirik tidak ditemukan hehehe")
     xxx = f"""
-**Lyrics Search Powered By Zaid Vc Player**
+**Pencarian Lirik Diatur Oleh Eiko Music Player**
 
-**Searched Song:-** __{query}__
+**Pencarian Lagu:-** __{query}__
 
-**Found Lyrics For:-** __{S.title}__
-**Artist:-** {S.artist}
+**Lirik Ditemukan Untuk:-** __{S.title}__
+**Artis:-** {S.artist}
 
-**__Lyrics:__**
+**__Lirik:__**
 
 {S.lyrics}"""
     await m.edit(xxx)
