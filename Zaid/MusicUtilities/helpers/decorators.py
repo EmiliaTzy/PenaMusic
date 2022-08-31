@@ -26,7 +26,7 @@ async def get_administrators(chat: Chat) -> List[int]:
                 to_set.append(administrator.user.id)
         set(chat.id, to_set)
 
-        return await get_administrators(chat
+        return await get_administrators(chat) 
 
 def authorized_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
