@@ -18,10 +18,10 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     async with aiohttp.ClientSession() as session:
         async with session.get(thumbnail) as resp:
             if resp.status == 200:
-                f = await aiofiles.open(f"search/thumb{userid}.png", mode="wb")
+                f = await aiofiles.open(f"search/Lightblue.png", mode="wb")
                 await f.write(await resp.read())
                 await f.close()
-    image1 = Image.open(f"search/thumb{userid}.png")
+    image1 = Image.open(f"search/Lightblue.png")
     image2 = Image.open(f"cache/Lightblue.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
