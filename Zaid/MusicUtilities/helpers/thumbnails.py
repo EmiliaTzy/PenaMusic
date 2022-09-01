@@ -42,7 +42,7 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     )
     draw.text(
         (10, 550),
-        f"Permintaan Dari: {userid[:15]}", 
+        f"Permintaan Dari: {userid[:15]}...", 
         f"Memutar Di: {ctitle[:15]}...",
         fill="white",
         stroke_width=1,
